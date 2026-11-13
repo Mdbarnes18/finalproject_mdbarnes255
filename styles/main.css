@@ -1,0 +1,232 @@
+/*
+    Author: Michael Barnes
+    Date: November 13, 2026
+*/
+
+/* General page styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f5f9;
+    color: #202b3c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.site-header {
+    padding: 2rem 1rem;
+    background-color: #17365d;
+    color: #ffffff;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.site-header h2 {
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.date {
+    margin-bottom: 0;
+}
+
+.container {
+    width: min(100% - 2rem, 1100px);
+    margin: 2rem auto;
+}
+
+h2 {
+    color: #17365d;
+}
+
+#ImageGallery {
+    margin-bottom: 3rem;
+}
+
+#ImageGallery > h2,
+.search-section > h2 {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gallery figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #d4dce7;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: #e8eef6;
+}
+
+.gallery figcaption {
+    padding: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search-section {
+    padding: 1.5rem;
+    border: 1px solid #d4dce7;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.search-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #8998aa;
+    border-radius: 5px;
+    font: inherit;
+}
+
+button {
+    padding: 0.85rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1764a0;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #104875;
+}
+
+a {
+    color: #075a9e;
+}
+
+a:hover {
+    color: #073d6b;
+    text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #e39b21;
+    outline-offset: 3px;
+}
+
+.results-section {
+    min-height: 350px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.message {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #e8eef6;
+}
+
+.error {
+    border-left: 4px solid #b42318;
+    background-color: #fff0ef;
+    color: #8c1d18;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.85rem;
+    border: 1px solid #cbd5e1;
+}
+
+th {
+    background-color: #17365d;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f5f9;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+
+.site-footer {
+    padding: 1rem;
+    background-color: #17365d;
+    color: #ffffff;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Desktop and tablet gallery layout */
+@media (min-width: 768px) {
+    .gallery {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .gallery figure {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .gallery img {
+        height: 240px;
+    }
+
+    .search-section {
+        padding: 2rem;
+    }
+}
