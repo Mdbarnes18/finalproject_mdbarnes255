@@ -107,14 +107,18 @@ if ($searchSubmitted) {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($students as $student): ?>
+                        <?php
+                        $studentIndex = 0;
+                        while ($studentIndex < count($students)):
+                            $student = $students[$studentIndex];
+                        ?>
                             <tr>
                                 <td><?php echo htmlspecialchars((string) $student['id'], ENT_QUOTES, 'UTF-8'); ?></td>
                                 <td><?php echo htmlspecialchars($student['first_name'], ENT_QUOTES, 'UTF-8'); ?></td>
                                 <td><?php echo htmlspecialchars($student['last_name'], ENT_QUOTES, 'UTF-8'); ?></td>
                                 <td><?php echo htmlspecialchars($student['email'], ENT_QUOTES, 'UTF-8'); ?></td>
                             </tr>
-                        <?php endforeach; ?>
+                        <?php $studentIndex++; endwhile; ?>
                     </tbody>
                 </table>
             </div>
