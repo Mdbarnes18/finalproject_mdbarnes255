@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const currentPage = window.location.pathname;
 
-    if (currentPage === '/' || currentPage.endsWith('/index.php')) {
+    if (currentPage.endsWith('/') || currentPage.endsWith('/index.php')) {
         alert('Welcome to the Student Directory!');
     }
 });

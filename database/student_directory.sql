@@ -1,3 +1,8 @@
+/*
+    Author: Michael Barnes
+    Date: November 13, 2026
+*/
+
 CREATE DATABASE IF NOT EXISTS student_directory;
 USE student_directory;
 
